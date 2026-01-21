@@ -30,10 +30,22 @@
       margin-bottom: 0 !important;
     }
     .subsection-title {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       font-weight: 600;
       color: #363636;
       margin-bottom: 10px;
+    }
+    .result-card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.08);
+      padding: 25px;
+      margin-bottom: 30px;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    .result-card:hover {
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), 0 4px 10px rgba(0, 0, 0, 0.1);
+      transform: translateY(-2px);
     }
   </style>
 
@@ -209,15 +221,15 @@
 </section>
 
 <section class="section">
-  <div class="container" style="margin-top: -150px; margin-bottom: -50px;">
+  <div class="container" style="margin-top: -50px; margin-bottom: -50px;">
     <div class="columns is-centered has-text-centered" style="margin-bottom: -30px;">
       <div class="column is-four-fifths">
-        <h3 class="subsection-title">Accuracy Perfor</h3>
+        <h3 class="subsection-title">Accuracy Performance</h3>
       </div>
     </div>
     <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
-        <div class="content has-text-centered">
+        <div class="result-card">
           <img src="figures/results_streaming.png" alt="results" style="max-width: 100%;"/>
           <p> 
             <span class="hermes">Performance comparison (\%) on StreamingBench and OVO-Bench. The "Avg." column reports the results of the average accuracy of real-time visual perception and backward tracing tasks.<br/>
@@ -225,12 +237,9 @@
         </div>
       </div>
     </div>
-</section>
-<section class="section">
-  <div class="container" style="margin-top: -50px; margin-bottom: -50px;">
     <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
-        <div class="content has-text-centered">
+        <div class="result-card">
           <img src="figures/results_streaming_rvs.png" alt="results" style="max-width: 100%;"/>
           <p> 
             <span class="hermes">Performance on RVS-Ego and RVS-Movie. \dag: ReKV caches the KV states of all previously seen frames and is therefore treated as an upper bound.<br/>
@@ -238,12 +247,9 @@
         </div>
       </div>
     </div>
-</section>
-<section class="section">
-  <div class="container" style="margin-top: -50px; margin-bottom: -50px;">
     <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
-        <div class="content has-text-centered">
+        <div class="result-card">
           <img src="figures/results_offline.png" alt="results" style="max-width: 100%;"/>
           <p> 
             <span class="hermes">Performance comparison (\%) on offline benchmarks.<br/>
@@ -262,7 +268,7 @@
     </div>
     <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
-        <div class="content has-text-centered">
+        <div class="result-card">
           <img src="figures/results_efficiency.png" alt="results" style="max-width: 100%;"/>
           <p> 
             <span class="hermes">GPU memory and TTFT latency comparison across input frame numbers. HERMES achieves 10&times; faster in TTFT compared to prior SOTA.<br/>
