@@ -96,9 +96,9 @@
     <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
         <div class="content has-text-centered">
-          <img src="figures/subquestion_quality_comparison.png" alt="motivation" style="max-width: 100%;"/>
+          <img src="figures/teaser.png" alt="motivation" style="max-width: 100%;"/>
           <p> 
-            <span class="hermes">Comparison of the VQD ability before and after finetuning</span>.<br/>
+            <span class="hermes"><b>Left</b>: <b>HERMES</b> is a training-free approach for efficient streaming video understanding, enabling stable inference by reusing KV cache and performing hierarchical management of video tokens stored in KV cache. <b>Middle</b>: <b>HERMES</b> is based on a mechanistic investigation of the layer-wise attention preferences over hierarchical video information. <b>Right</b>: We evaluate LLaVA-OV-7B on a single A800 GPU (80 GB). As input frames increase, <b>HERMES</b> consistently maintains extremely low latency (TTFT &lt; 30 ms) and stable GPU memory consumption, exhibiting no risk of OOM errors and requiring no auxiliary external computational resources.</span>.<br/>
           </p> 
         </div>
       </div>
@@ -114,7 +114,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Question decomposition has emerged as an effective strategy for prompting Large Language Models (LLMs) to answer complex questions. However, while existing methods primarily focus on unimodal language models, the question decomposition capability of Multimodal Large Language Models (MLLMs) has yet to be explored. To this end, this paper explores visual question decomposition on MLLMs. Specifically, we introduce a systematic evaluation framework including a dataset and several evaluation criteria to assess the quality of the decomposed sub-questions, revealing that existing MLLMs struggle to produce high-quality sub-questions. To address this limitation, we propose a specific finetuning dataset, DecoVQA+, for enhancing the model's question decomposition capability. Aiming at enabling models to perform appropriate selective decomposition, we propose an efficient finetuning pipeline. The finetuning pipeline consists of our proposed dataset and a training objective for selective decomposition. Finetuned MLLMs demonstrate significant improvements in the quality of sub-questions and the policy of selective question decomposition. Additionally, the models also achieve higher accuracy with selective decomposition on VQA benchmark datasets.
+            Recent advancements in Multimodal Large Language Models (MLLMs) have demonstrated significant improvement in offline video understanding. However, extending these capabilities to streaming video inputs, remains challenging, as existing models struggle to simultaneously maintain stable understanding performance, real-time responses, and low GPU memory overhead. To address this challenge, we propose <b>HERMES</b>, a novel training-free architecture for real-time and accurate understanding of video streams. Based on a mechanistic attention investigation, we conceptualize KV cache as a hierarchical memory framework that encapsulates video information across multiple granularities. During inference, <b>HERMES</b> reuses a compact KV cache, enabling efficient streaming understanding under resource constraints. Notably, <b>HERMES</b> requires no auxiliary computations upon the arrival of user queries, thereby guaranteeing real-time responses for continuous video stream interactions, which achieves 10&times; faster TTFT compared to prior SOTA. Even when reducing video tokens by up to 68% compared with uniform sampling, <b>HERMES</b> achieves superior or comparable accuracy across all benchmarks, with up to 11.4% gains on streaming datasets.
           </p>
         </div>
       </div>
@@ -135,10 +135,10 @@
 
 
 <!-- @PAN TODO: bibtex -->
-<!-- <section class="section" id="BibTeX">
+<section class="section" id="Citation">
   <div class="container is-max-desktop content">
     <h2 class="title is-3 has-text-centered">BibTeX</h2>
-    <pre><code>
+    <!-- <pre><code>
       @misc{zhang2024visualquestiondecompositionmultimodal,
         title={Visual Question Decomposition on Multimodal Large Language Models}, 
         author={Haowei Zhang and Jianzhe Liu and Zhen Han and Shuo Chen and Bailan He and Volker Tresp and Zhiqiang Xu and Jindong Gu},
@@ -148,9 +148,9 @@
         primaryClass={cs.CL},
         url={https://arxiv.org/abs/2409.19339}, 
   }
-    </code></pre>
+    </code></pre> -->
   </div>
-</section> -->
+</section>
 
 <!-- <section>
   <div class="section" id="org-banners" style="display:flex">
@@ -181,7 +181,7 @@
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is adapted from <a href="https://financemath-acl2024.github.io/">FinanceMath</a>.
+            This website is adapted from <a href="https://mathvista.github.io/">MathVista</a>, licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
         </div>
       </div>
