@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="HERMES: KV Cache as Hierarchical Memory for Efficient Streaming Video Understanding">
+  <meta name="keywords" content="HERMES">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> HERMES: KV Cache as Hierarchical Memory for Efficient Streaming Video Understanding</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <!--  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title is-bold">
+            <span class="hermes" style="vertical-align: middle">HERMES: KV Cache as Hierarchical Memory for Efficient Streaming Video Understanding</span>
+            </h1>
+          <h2 class="subtitle is-3 publication-subtitle">
+            Real-time, memory-efficient, and accurate video understanding through hierarchical KV cache reuse.
+          </h2>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://haowei-freesky.github.io/">Haowei Zhang</a><sup style="color:#0e419c;">1*</sup>,</span>
+            <span class="author-block">
+              <a href="https://luppppy.github.io/">Shudong Yang</a><sup style="color:#6fbf73">2*</sup>,</span>
+            <span class="author-block">
+              <a href="https://jinlanfu.github.io/">Jinlan Fu</a><sup style="color:#0e419c">1</sup>,<sup style="color:#ed4b82">3&#9993;</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.comp.nus.edu.sg/~ngsk/">See-Kiong Ng</a><sup style="color:#ed4b82">3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://xpqiu.github.io/">Xipeng Qiu</a><sup style="color:#0e419c">1</sup>,<sup style="color:#6fbf73">2&#9993;</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup style="color:#0e419c">1</sup>Fudan University,</span>
+            <span class="author-block"><sup style="color:#6fbf73;">1</sup>Shanghai Innovation Institute,</span>
+            <span class="author-block"><sup style="color:#ed4b82">3</sup>National University of Singapore,</span><br>
+            <!--<span class="paper-block"><b style="color:#f41c1c">EMNLP 2024 Findings</b></span>-->
+          </div>
+          
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2409.19339"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/haowei-freesky/HERMES"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container" style="margin-top: -150px; margin-bottom: -100px;">
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <div class="content has-text-centered">
+          <img src="figures/subquestion_quality_comparison.png" alt="motivation" style="max-width: 100%;"/>
+          <p> 
+            <span class="hermes">Comparison of the VQD ability before and after finetuning</span>.<br/>
+          </p> 
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<section class="section">
+  <div class="container" style="margin-bottom: 2vh;">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Question decomposition has emerged as an effective strategy for prompting Large Language Models (LLMs) to answer complex questions. However, while existing methods primarily focus on unimodal language models, the question decomposition capability of Multimodal Large Language Models (MLLMs) has yet to be explored. To this end, this paper explores visual question decomposition on MLLMs. Specifically, we introduce a systematic evaluation framework including a dataset and several evaluation criteria to assess the quality of the decomposed sub-questions, revealing that existing MLLMs struggle to produce high-quality sub-questions. To address this limitation, we propose a specific finetuning dataset, DecoVQA+, for enhancing the model's question decomposition capability. Aiming at enabling models to perform appropriate selective decomposition, we propose an efficient finetuning pipeline. The finetuning pipeline consists of our proposed dataset and a training objective for selective decomposition. Finetuned MLLMs demonstrate significant improvements in the quality of sub-questions and the policy of selective question decomposition. Additionally, the models also achieve higher accuracy with selective decomposition on VQA benchmark datasets.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+</div>
+</section>
+
+
+<!-- DATASET SECTION -->
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+    <h1 class="title is-1 mathvista">
+    <span class="mathvista" style="vertical-align: middle">FinanceMath Dataset</span>
+  </h1>
+  </div>
+</section> -->
+
+
+<!-- @PAN TODO: bibtex -->
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3 has-text-centered">BibTeX</h2>
+    <pre><code>
+      @misc{zhang2024visualquestiondecompositionmultimodal,
+        title={Visual Question Decomposition on Multimodal Large Language Models}, 
+        author={Haowei Zhang and Jianzhe Liu and Zhen Han and Shuo Chen and Bailan He and Volker Tresp and Zhiqiang Xu and Jindong Gu},
+        year={2024},
+        eprint={2409.19339},
+        archivePrefix={arXiv},
+        primaryClass={cs.CL},
+        url={https://arxiv.org/abs/2409.19339}, 
+  }
+    </code></pre>
+  </div>
+</section> -->
+
+<!-- <section>
+  <div class="section" id="org-banners" style="display:flex">
+    <a href="https://www.yale.edu/" target="_blank" rel="external">
+        <img class="center-block org-banner" src="static/images/yale.png">
+    </a>
+    <a href="https://www.nyu.edu/" target="blank" rel="external">
+        <img class="center-block org-banner" src="static/images/nyu.png">
+    </a>
+    <a href="https://shanghai.nyu.edu/" target="_blank" rel="external">
+        <img class="center-block org-banner" src="static/images/nyush.png">
+    </a>
+    <a href="https://www.psu.edu/" target="_blank" rel="external">
+      <img class="center-block org-banner" src="static/images/psu.png">
+    </a>
+    <a href="https://allenai.org/" target="_blank" rel="external">
+      <img class="center-block org-banner" src="static/images/ai2.png">
+    </a>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <!-- <div class="container"> -->
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is adapted from <a href="https://financemath-acl2024.github.io/">FinanceMath</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  <!-- </div> -->
+</footer>
+
+</body>
+</html>
