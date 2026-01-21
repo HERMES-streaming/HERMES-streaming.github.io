@@ -10,7 +10,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="icon" type="image/png" href="figures/logo.png">
-  
+
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
@@ -131,21 +131,134 @@
 </div>
 </section>
 
+<section class="section">
+  <div class="container" style="margin-bottom: 2vh;">
+    <!-- Mechanistic Investigation. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Mechanistic Investigation</h2>
+        <div class="content has-text-justified">
+        </div>
+      </div>
+    </div>
+    <!--/ Mechanistic Investigation. -->
+</div>
+</section>
 
-<!-- DATASET SECTION -->
-<!-- <section class="hero is-light is-small">
-  <div class="hero-body has-text-centered">
-    <h1 class="title is-1 mathvista">
-    <span class="mathvista" style="vertical-align: middle">FinanceMath Dataset</span>
-  </h1>
-  </div>
-</section> -->
+<section class="section">
+  <div class="container" style="margin-top: -150px; margin-bottom: -100px;">
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <div class="content has-text-centered">
+          <img src="figures/investigation.png" alt="mechanistic_investigation" style="max-width: 100%;"/>
+          <p> 
+            <span class="hermes">Visualization of the average attention weights (log scale) for user queries over video tokens in \llava with a FIFO KV cache budget of 6K video tokens per layer, averaged across 300 user video questions.<br/>
+          </p> 
+        </div>
+      </div>
+    </div>
+</section>
 
+<section class="section">
+  <div class="container" style="margin-bottom: 2vh;">
+    <!-- Overview. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Overview</h2>
+        <div class="content has-text-justified">
+        </div>
+      </div>
+    </div>
+    <!--/ Overview. -->
+</div>
+</section>
+
+<section class="section">
+  <div class="container" style="margin-top: -150px; margin-bottom: -100px;">
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <div class="content has-text-centered">
+          <img src="figures/overview.png" alt="overview" style="max-width: 100%;"/>
+          <p> 
+            <span class="hermes">Overview of the HERMES architecture for streaming video QA. By implementing a hierarchical KV cache and specialized management strategies, HERMES enables real-time and accurate responses through direct cache reuse, eliminating the need for additional retrieval operations or external memory whenever users pose questions.<br/>
+          </p> 
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section">
+  <div class="container" style="margin-bottom: 2vh;">
+    <!-- Experimental Results. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experimental Results</h2>
+        <div class="content has-text-justified">
+        </div>
+      </div>
+    </div>
+    <!--/ Experimental Results. -->
+</div>
+</section>
+
+<section class="section">
+  <div class="container" style="margin-top: -150px; margin-bottom: -100px;">
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <div class="content has-text-centered">
+          <img src="figures/results_streaming.png" alt="results" style="max-width: 100%;"/>
+          <p> 
+            <span class="hermes">Performance comparison (\%) on StreamingBench and OVO-Bench. The "Avg." column reports the results of the average accuracy of real-time visual perception and backward tracing tasks.<br/>
+          </p> 
+        </div>
+      </div>
+    </div>
+</section>
+<section class="section">
+  <div class="container" style="margin-top: -150px; margin-bottom: -100px;">
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <div class="content has-text-centered">
+          <img src="figures/results_streaming_rvs.png" alt="results" style="max-width: 100%;"/>
+          <p> 
+            <span class="hermes">Performance on RVS-Ego and RVS-Movie. \dag: ReKV caches the KV states of all previously seen frames and is therefore treated as an upper bound.<br/>
+          </p> 
+        </div>
+      </div>
+    </div>
+</section>
+<section class="section">
+  <div class="container" style="margin-top: -150px; margin-bottom: -100px;">
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <div class="content has-text-centered">
+          <img src="figures/results_offline.png" alt="results" style="max-width: 100%;"/>
+          <p> 
+            <span class="hermes">Performance comparison (\%) on offline benchmarks.<br/>
+          </p> 
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section">
+  <div class="container" style="margin-top: -150px; margin-bottom: -100px;">
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <div class="content has-text-centered">
+          <img src="figures/results_efficiency.png" alt="results" style="max-width: 100%;"/>
+          <p> 
+            <span class="hermes">GPU memory and TTFT latency comparison across input frame numbers. HERMES achieves 10&times; faster in TTFT compared to prior SOTA.<br/>
+          </p> 
+        </div>
+      </div>
+    </div>
+</section>
 
 <!-- @PAN TODO: bibtex -->
 <section class="section" id="Citation">
   <div class="container is-max-desktop content">
-    <h2 class="title is-3 has-text-centered">BibTeX</h2>
+    <h2 class="title is-3 has-text-centered">Citation</h2>
     <!-- <pre><code>
       @misc{zhang2024visualquestiondecompositionmultimodal,
         title={Visual Question Decomposition on Multimodal Large Language Models}, 
